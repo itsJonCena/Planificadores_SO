@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
@@ -10,6 +11,11 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL arg, ResourceBundle rb) {
+    }
+
+    @FXML
+    public void AgregarProceso(){
+
     }
 
 }
