@@ -32,6 +32,7 @@ public class Algoritmos_de_Procesos {
                 llegada[i] = llegada[i-1] + lista_proceso.get(i).getTamaño();
             }
         }
+
         int entro = 0;
         for (int i = 0; i < lista_proceso.size()-1; i++) {
             entro = entro + lista_proceso.get(i).getTamaño();
@@ -39,7 +40,7 @@ public class Algoritmos_de_Procesos {
         }
         double medio = time/lista_proceso.size();
         System.out.println();
-        System.out.println("Tiempo medio: " + medio);
+        System.out.println("Tiempo medio de espera: " + medio);
         
     }
     
@@ -120,7 +121,7 @@ public class Algoritmos_de_Procesos {
             if(proceso.get(0).getTamaño()<=0)
             {
                 suma=(suma+tTrans)-(proceso.get(0).getTiempo_llegada()+proceso.get(0).getReten());
-//                System.out.println("Removido: " + "Proceso "+tTrans+"\t"+ proceso.get(0).getTamaño()+"\t" + proceso.get(0).getTiempo_llegada() + "\t" + proceso.get(0).getPrioridad());
+//                System.out.println("Removido: " + "Proceso "+tTrans+"\t"+ nuevos.get(0).getTamaño()+"\t" + nuevos.get(0).getTiempo_llegada() + "\t" + nuevos.get(0).getPrioridad());
                 proceso.remove(0);
             }
             tTrans++;
@@ -198,7 +199,7 @@ public class Algoritmos_de_Procesos {
                 if(q < auxiliar.get(i)){
                     aux = auxiliar.get(i) - q;
                     auxiliar.set(i, aux);
-                    //gant.add("proceso " + (i+1));
+                    //gant.add("nuevos " + (i+1));
                     gant.add(lista_proceso.get(i).nombre_proceso);
                     cont+= q;
                     gant_value.add(cont);
@@ -206,7 +207,7 @@ public class Algoritmos_de_Procesos {
                 else{
                     if(auxiliar.get(i) != 0){
                         gant.add(lista_proceso.get(i).nombre_proceso);
-                        //gant.add("proceso " + (i+1));
+                        //gant.add("nuevos " + (i+1));
                         cont+=auxiliar.get(i);
                         gant_value.add(cont);
                         auxiliar.set(i, 0);
@@ -235,7 +236,7 @@ public class Algoritmos_de_Procesos {
             cont=0;
             resultado = 0;
             for (int j = gant.size()-1; j >= 0; j--) {
-                if(gant.get(j).equals("proceso " + (i+1))){
+                if(gant.get(j).equals("nuevos " + (i+1))){
                     if(cont  == 0){
                         resultado += gant_value.get(j);
                         cont = 1;
@@ -254,7 +255,7 @@ public class Algoritmos_de_Procesos {
     
     public static int getT_llegada(ArrayList<Procesos> lista_proceso, int n){
         for (int i = 0; i <lista_proceso.size(); i++) {
-            if(lista_proceso.get(i).getNombre_proceso().equals("proceso " + (n+1)))
+            if(lista_proceso.get(i).getNombre_proceso().equals("nuevos " + (n+1)))
                 return i;
         }
         return 0;

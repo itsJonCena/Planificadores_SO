@@ -1,6 +1,7 @@
 package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -8,25 +9,19 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    Modelo nuevo = new Modelo();
 
-    @FXML
-    private TextField Nompro;
-    @FXML
-    private TextField TiempoLlegada;
-    @FXML
-    private TextField TiempoProcesador;
-    @FXML
-    private TextField Prioridad;
-   
+
+    @FXML public static ListView lsNuevos= new ListView();
 
     @Override
     public void initialize(URL arg, ResourceBundle rb) {
     }
 
     @FXML
-    public void AgregarProceso() throws Exception {
+    public void crearProcesos() throws Exception {
 
-
+        nuevo.run();
 
     }
 

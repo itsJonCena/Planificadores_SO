@@ -5,7 +5,6 @@
  */
 package sample;
 
-import java.util.Queue;
 
 /**
  *
@@ -15,7 +14,7 @@ public class Procesos implements Comparable<Procesos>{
     String nombre_proceso;
     int reten;
     boolean reg=true;
-    int tiempo_llegada;
+    public int tiempo_llegada;
     int tamaño;
     int prioridad;
     public Procesos(int tamaño, int tiempo, int prioridad, String Nombre){

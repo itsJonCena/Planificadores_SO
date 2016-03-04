@@ -4,24 +4,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="400" maxWidth="600" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="400" maxWidth="734.0" prefHeight="400.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <TextField fx:id="Nompro" layoutX="34.0" layoutY="43.0" prefHeight="27.0" prefWidth="106.0" />
-      <TextField fx:id="TiempoLlegada" layoutX="148.0" layoutY="43.0" prefHeight="27.0" prefWidth="106.0" />
-      <TextField fx:id="TiempoProcesador" layoutX="261.0" layoutY="43.0" prefHeight="27.0" prefWidth="106.0" />
-      <Button layoutX="511.0" layoutY="31.0" mnemonicParsing="false" onAction="#AgregarProceso" text="Agregar" />
-      <TableView layoutX="34.0" layoutY="100.0" prefHeight="245.0" prefWidth="528.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C3" />
-            <TableColumn prefWidth="75.0" text="C4" />
-            <TableColumn prefWidth="75.0" text="C5" />
-            <TableColumn prefWidth="75.0" text="C6" />
-            <TableColumn prefWidth="75.0" text="C7" />
-        </columns>
-      </TableView>
-      <TextField fx:id="Prioridad" layoutX="377.0" layoutY="44.0" prefHeight="25.0" prefWidth="106.0" />
-      <Button layoutX="511.0" layoutY="69.0" mnemonicParsing="false" onAction="#MostrarProcesos" prefHeight="25.0" prefWidth="59.0" text="Button" />
+      <Button layoutX="520.0" layoutY="14.0" mnemonicParsing="false" onAction="#crearProcesos" text="Run" />
+      <ComboBox layoutX="345.0" layoutY="13.0" prefWidth="150.0" />
+      <ListView layoutX="14.0" layoutY="127.0" prefHeight="266.0" prefWidth="127.0" />
+      <ListView layoutX="153.0" layoutY="127.0" prefHeight="266.0" prefWidth="127.0" />
+      <ListView layoutX="426.0" layoutY="127.0" prefHeight="266.0" prefWidth="127.0" />
+      <ListView layoutX="287.0" layoutY="127.0" prefHeight="266.0" prefWidth="127.0" />
+      <ListView layoutX="571.0" layoutY="127.0" prefHeight="266.0" prefWidth="127.0" />
+      <Label layoutX="58.0" layoutY="95.0" text="Nuevo" />
+      <Label layoutX="181.0" layoutY="96.0" text="Preparados" />
+      <Label layoutX="312.0" layoutY="96.0" text="En ejecucion" />
+      <Label layoutX="451.0" layoutY="95.0" text="Bloqueados" />
+      <Label layoutX="598.0" layoutY="96.0" text="Terminados" />
    </children>
 </AnchorPane>
