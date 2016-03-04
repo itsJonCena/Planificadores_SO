@@ -11,7 +11,7 @@ package sample;
  * @author Jesus Guillermo
  */
 public class Procesos implements Comparable<Procesos>{
-    String nombre_proceso;
+    public String nombre_proceso;
     int reten;
     boolean reg=true;
     public int tiempo_llegada;
